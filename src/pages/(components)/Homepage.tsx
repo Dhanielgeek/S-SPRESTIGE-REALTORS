@@ -7,6 +7,9 @@ import Trending from "./Trending";
 import Testimonials from "./Testimonals";
 
 import Newsletter from "./newsletter";
+import Featurelistings from "./featurelistings";
+
+
 
 
 const Homepage = () => {

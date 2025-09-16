@@ -1,13 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import featurehouse from "../../../assets/forhero.avif";
+import { useRouter } from "next/router";
 
 const Featurelistings = () => {
+  const router = useRouter();
+
   const listings = [
     {
       id: 1,
       title: "Luxury home in Lekki, Lagos",
-      price: "₦150M",
+      price: null,
       beds: 5,
       baths: 4,
       img: featurehouse,
@@ -15,7 +18,7 @@ const Featurelistings = () => {
     {
       id: 2,
       title: "Modern Duplex in Victoria Island",
-      price: "₦200M",
+      price: null, // 👈 shows "Contact for price"
       beds: 6,
       baths: 5,
       img: featurehouse,
@@ -23,7 +26,7 @@ const Featurelistings = () => {
     {
       id: 3,
       title: "Beachfront Mansion in Banana Island",
-      price: "₦450M",
+      price: null,
       beds: 8,
       baths: 7,
       img: featurehouse,
@@ -31,25 +34,9 @@ const Featurelistings = () => {
     {
       id: 4,
       title: "Cozy Apartment in Ikoyi",
-      price: "₦90M",
+      price: null, // 👈 shows "Contact for price"
       beds: 3,
       baths: 2,
-      img: featurehouse,
-    },
-    {
-      id: 5,
-      title: "Family Home in Ajah",
-      price: "₦120M",
-      beds: 4,
-      baths: 3,
-      img: featurehouse,
-    },
-    {
-      id: 6,
-      title: "Penthouse in Marina",
-      price: "₦300M",
-      beds: 6,
-      baths: 5,
       img: featurehouse,
     },
   ];
@@ -82,10 +69,9 @@ const Featurelistings = () => {
                   quality={100}
                 />
               </div>
-
               <div className="flex justify-between items-center mt-4">
                 <span className="text-lg font-bold text-gray-900">
-                  {listing.price}
+                  {listing.price ? listing.price : "Contact for price"}
                 </span>
                 <span className="text-gray-500">
                   {listing.beds} Beds • {listing.baths} Baths
@@ -122,8 +108,11 @@ const Featurelistings = () => {
               </div>
 
               <div className="flex justify-between items-center mt-4">
-                <span className="text-lg font-bold text-gray-900">
-                  {listing.price}
+                <span
+                  onClick={() => router.push("/book")}
+                  className="text-lg font-bold text-gray-900"
+                >
+                  {listing.price ? listing.price : "Contact for price"}
                 </span>
                 <span className="text-gray-500">
                   {listing.beds} Beds • {listing.baths} Baths

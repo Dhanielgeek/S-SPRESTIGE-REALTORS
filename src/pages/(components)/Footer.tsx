@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../../../assets/sandsprestigelogo-removebg-preview.png";
+import { useRouter } from "next/router";
 
 const Footer: React.FC = () => {
+  const router = useRouter();
+
   return (
     <footer className="bg-gray-100 text-gray-700 pt-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -22,8 +25,7 @@ const Footer: React.FC = () => {
             <h2 className="text-xl font-bold text-gray-900">S & S Prestige</h2>
           </div>
           <p className="text-sm leading-relaxed text-gray-600">
-            Committed to delivering excellence in real estate sales, rentals,
-            and shortlets. We guide you every step of the way.
+            Providing excellent service in locating your ideal property.
           </p>
         </div>
 
@@ -34,32 +36,68 @@ const Footer: React.FC = () => {
           </h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="#home" className="hover:text-black transition-colors">
+              <span
+                onClick={() => router.push("/#home")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
                 Home
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#sale" className="hover:text-black transition-colors">
+              <span
+                onClick={() => router.push("/#sale")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
                 Sale
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#rent" className="hover:text-black transition-colors">
+              <span
+                onClick={() => router.push("/#rent")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
                 Rent
-              </a>
+              </span>
             </li>
             <li>
-              <a
-                href="#shortlet"
-                className="hover:text-black transition-colors"
+              <span
+                onClick={() => router.push("/#shortlet")}
+                className="hover:text-black transition-colors cursor-pointer"
               >
                 Shortlet/BnB
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#book" className="hover:text-black transition-colors">
-                Book Online
-              </a>
+              <span
+                onClick={() => router.push("/book")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
+                Book and Inspect
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => router.push("/book")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
+                Asset Valuation
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => router.push("/book")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
+                Asset Management
+              </span>
+            </li>
+            <li>
+              <span
+                onClick={() => router.push("/book")}
+                className="hover:text-black transition-colors cursor-pointer"
+              >
+                Facility Management
+              </span>
             </li>
           </ul>
         </div>
@@ -87,18 +125,18 @@ const Footer: React.FC = () => {
             Follow Us
           </h3>
           <div className="flex space-x-4 text-xl">
-            <a href="#" className="hover:text-black transition-colors">
+            <span className="hover:text-black transition-colors cursor-pointer">
               <FaFacebook />
-            </a>
-            <a href="#" className="hover:text-black transition-colors">
+            </span>
+            <span className="hover:text-black transition-colors cursor-pointer">
               <FaTwitter />
-            </a>
-            <a href="#" className="hover:text-black transition-colors">
+            </span>
+            <span className="hover:text-black transition-colors cursor-pointer">
               <FaInstagram />
-            </a>
-            <a href="#" className="hover:text-black transition-colors">
+            </span>
+            <span className="hover:text-black transition-colors cursor-pointer">
               <FaLinkedin />
-            </a>
+            </span>
           </div>
         </div>
       </div>

@@ -1,22 +1,20 @@
 import React from "react";
 
-// import heroimg from "../../../assets/herobuiliding.avif";
-import heroimg from '../../../assets/TallBuilding.jpg'
-
+import heroimg from "../../../assets/TallBuilding.jpg";
 
 import Image from "next/image";
 
 const HeroSection = () => {
   const stats = [
-    { number: "500+", label: "Properties Sold" },
+    { number: "500+", label: "Properties Sold & Leased" },
     { number: "200+", label: "Happy Clients" },
-    { number: "5", label: "Years Experience" },
+    { number: "9+", label: "Years Experience" },
     { number: "15+", label: "Areas Covered" },
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-      {/* Background Image - Black & White */}
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src={heroimg}
@@ -27,7 +25,8 @@ const HeroSection = () => {
           quality={100}
         />
       </div>
-      {/* Gradient Overlay (lighter) */}
+
+      {/* Overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/30"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
 
@@ -57,13 +56,12 @@ const HeroSection = () => {
 
         {/* Subtext */}
         <p className="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12 font-light">
-          Discover timeless properties, prime locations, and exceptional
-          service. Your perfect home is waiting — step into elegance.
+          Providing excellent service in locating your ideal property
         </p>
 
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
           <button className="group bg-white text-black hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:scale-105">
             <span className="flex items-center gap-2">Explore Properties</span>
           </button>
@@ -71,6 +69,14 @@ const HeroSection = () => {
             Schedule Viewing
           </button>
         </div>
+
+
+        {/* ✅ Trust Badge */}
+        <p className="text-sm text-gray-300 mb-16">
+          Registered with the Corporate Affairs Commission (CAC), Nigeria · RC:{" "}
+          <span className="font-semibold text-white">1321744</span> ·
+          Incorporated in 2016
+        </p>
 
 
         {/* Stats */}

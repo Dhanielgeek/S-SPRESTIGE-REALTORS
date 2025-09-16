@@ -15,7 +15,6 @@ interface Service {
 const ServicesSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-
   const services: Service[] = [
     {
       id: 1,
@@ -75,6 +74,51 @@ const ServicesSection: React.FC = () => {
         "Maintenance Services",
         "Financial Reporting",
         "Legal Compliance",
+      ],
+    },
+    {
+      id: 5,
+      title: "Asset Valuation",
+      subtitle: "True Market Value",
+      description:
+        "We provide accurate and reliable valuations to help you understand the true worth of your assets. Our team ensures compliance with industry standards and offers insights to support your decision-making.",
+      image:
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80",
+      features: [
+        "Professional Valuation Reports",
+        "Regulatory Compliance",
+        "Risk Assessment",
+        "Detailed Market Insights",
+      ],
+    },
+    {
+      id: 6,
+      title: "Asset Management",
+      subtitle: "Maximizing Value",
+      description:
+        "Our asset management service helps you optimize your property portfolio for long-term profitability. We focus on risk mitigation, growth strategies, and sustainable wealth creation.",
+      image:
+        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1000&q=80",
+      features: [
+        "Portfolio Optimization",
+        "Strategic Planning",
+        "Performance Monitoring",
+        "Risk & Return Balancing",
+      ],
+    },
+    {
+      id: 7,
+      title: "Facility Management",
+      subtitle: "Seamless Operations",
+      description:
+        "Ensuring your properties run smoothly with top-notch facility management services. From daily operations to long-term maintenance, we guarantee efficiency and value preservation.",
+      image:
+        "https://images.unsplash.com/photo-1529429617124-95b109e86bb8?auto=format&fit=crop&w=1000&q=80",
+      features: [
+        "Preventive Maintenance",
+        "Utility Management",
+        "Health & Safety Compliance",
+        "Operational Efficiency",
       ],
     },
   ];
