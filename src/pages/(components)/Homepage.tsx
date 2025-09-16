@@ -5,11 +5,8 @@ import Hero from "./Hero";
 import Services from "./Services";
 import Trending from "./Trending";
 import Testimonials from "./Testimonals";
-<<<<<<< HEAD
-import Featurelistings from "./featurelistings";
-=======
 import Newsletter from "./newsletter";
->>>>>>> 5296d0a (newwspaper)
+import Featurelistings from "./featurelistings";
 
 const Homepage = () => {
   return (

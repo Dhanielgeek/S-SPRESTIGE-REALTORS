@@ -1,23 +1,18 @@
 import React from "react";
-<<<<<<< HEAD
-import heroimg from "../../../assets/herobuiliding.avif";
-=======
-// import heroimg from "../../../assets/herobuiliding.avif";
-import heroimg from '../../../assets/TallBuilding.jpg'
->>>>>>> 5296d0a (newwspaper)
+import heroimg from "../../../assets/TallBuilding.jpg";
 import Image from "next/image";
 
 const HeroSection = () => {
   const stats = [
-    { number: "500+", label: "Properties Sold" },
+    { number: "500+", label: "Properties Sold & Leased" },
     { number: "200+", label: "Happy Clients" },
-    { number: "5", label: "Years Experience" },
+    { number: "9+", label: "Years Experience" },
     { number: "15+", label: "Areas Covered" },
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-      {/* Background Image - Black & White */}
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src={heroimg}
@@ -28,7 +23,8 @@ const HeroSection = () => {
           quality={100}
         />
       </div>
-      {/* Gradient Overlay (lighter) */}
+
+      {/* Overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/30"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
 
@@ -56,12 +52,11 @@ const HeroSection = () => {
 
         {/* Subtext */}
         <p className="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12 font-light">
-          Discover timeless properties, prime locations, and exceptional
-          service. Your perfect home is waiting — step into elegance.
+          Providing excellent service in locating your ideal property
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
           <button className="group bg-white text-black hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:scale-105">
             <span className="flex items-center gap-2">Explore Properties</span>
           </button>
@@ -69,6 +64,13 @@ const HeroSection = () => {
             Schedule Viewing
           </button>
         </div>
+
+        {/* ✅ Trust Badge */}
+        <p className="text-sm text-gray-300 mb-16">
+          Registered with the Corporate Affairs Commission (CAC), Nigeria · RC:{" "}
+          <span className="font-semibold text-white">1321744</span> ·
+          Incorporated in 2016
+        </p>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -80,75 +82,8 @@ const HeroSection = () => {
               <div className="text-sm md:text-base text-gray-400 font-medium tracking-wider uppercase">
                 {stat.label}
               </div>
-<<<<<<< HEAD
             </div>
           ))}
-=======
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                Find Your
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400">
-                  Dream Home
-                </span>
-                <span className="block">Today</span>
-              </h1>
-
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-                Providing excellent service in locating your Ideal property .
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-black text-white hover:bg-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg">
-                Explore Properties
-              </button>
-              <button className="bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-gray-300">
-                Schedule Viewing
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Content – Featured Property */}
-          <div className="bg-white backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Featured Listing
-            </h3>
-            <p className="text-gray-600 mb-4">Luxury home in Lekki, Lagos</p>
-
-            <div className="w-full">
-              <Image
-                src={heroimg}
-                alt="Featured Property"
-                width={600}
-                height={300}
-                className="rounded-xl object-cover w-full"
-                quality={100}
-              />
-            </div>
-
-            <div className="flex justify-between items-center mt-4">
-              <span className="text-xl font-semibold text-gray-900">₦150M</span>
-              <span className="text-gray-500">5 Beds • 4 Baths</span>
-            </div>
-
-            <button className="w-full mt-6 bg-black text-white py-3 px-6 rounded-lg font-semibold transition hover:bg-gray-900">
-              View Details
-            </button>
-          </div>
->>>>>>> 5296d0a (newwspaper)
         </div>
       </div>
     </section>

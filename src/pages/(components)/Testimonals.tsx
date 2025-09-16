@@ -36,10 +36,8 @@ const Testimonials = () => {
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-transparent tracking-tight mb-16 leading-tight">
-          Clients spill the beans; their{" "}
-          <span className="text-black">love</span>
+          Real Stories, <span className="text-black">Real Trust</span>
           <br />
-          for us!
         </h2>
 
         {/* Testimonial Cards Container */}

@@ -2,16 +2,18 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaPhone, FaEnvelope } from "react-icons/fa";
 import logo from "../../../assets/sandsprestigelogo-removebg-preview.png";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Sale", href: "#sale" },
-    { name: "Rent", href: "#rent" },
-    { name: "Shortlet/BnB", href: "#shortlet" },
-    { name: "Book & Inspection", href: "#book", isButton: true },
+    { name: "Home", path: "/" },
+    { name: "Sale", path: "#sale" },
+    { name: "Rent", path: "#rent" },
+    { name: "Shortlet/BnB", path: "#shortlet" },
+    { name: "Book & Inspection", path: "/book", isButton: true },
   ];
 
   return (
@@ -19,8 +21,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo Section */}
-          {/* Logo Section */}
-          <div className="flex items-center space-x-3">
+          <div
+            className="flex items-center space-x-3 cursor-pointer"
+            onClick={() => router.push("/")}
+          >
             <div className="md:w-16 md:h-16 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-md">
               <Image
                 src={logo}
@@ -32,7 +36,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="md:text-2xl text-lg font-bold text-gray-900">
-                S & S Prestige
+                S&S Prestige
               </span>
               <span className="text-sm text-gray-500 font-medium -mt-1">
                 Realtors
@@ -44,22 +48,26 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link, index) =>
               link.isButton ? (
-                <a
+                <span
                   key={index}
-                  href={link.href}
-                  className="bg-black text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow hover:shadow-lg hover:scale-105"
+                  onClick={() => router.push(link.path)}
+                  className="cursor-pointer bg-black text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow hover:shadow-lg hover:scale-105"
                 >
                   {link.name}
-                </a>
+                </span>
               ) : (
-                <a
+                <span
                   key={index}
-                  href={link.href}
-                  className="text-gray-700 hover:text-black font-medium transition-colors duration-300 relative group"
+                  onClick={() =>
+                    link.path.startsWith("#")
+                      ? (window.location.hash = link.path)
+                      : router.push(link.path)
+                  }
+                  className="cursor-pointer text-gray-700 hover:text-black font-medium transition-colors duration-300 relative group"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </span>
               )
             )}
           </nav>
@@ -100,23 +108,31 @@ const Header = () => {
         <div className="px-4 py-6 space-y-4">
           {navLinks.map((link, index) =>
             link.isButton ? (
-              <a
+              <span
                 key={index}
-                href={link.href}
-                className="block w-full bg-black text-white text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow hover:scale-105"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  router.push(link.path);
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full cursor-pointer bg-black text-white text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow hover:scale-105"
               >
                 {link.name}
-              </a>
+              </span>
             ) : (
-              <a
+              <span
                 key={index}
-                href={link.href}
-                className="block text-gray-700 hover:text-black font-medium py-2 transition-colors duration-300 border-b border-gray-100"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  if (link.path.startsWith("#")) {
+                    window.location.hash = link.path;
+                  } else {
+                    router.push(link.path);
+                  }
+                  setIsMenuOpen(false);
+                }}
+                className="block cursor-pointer text-gray-700 hover:text-black font-medium py-2 transition-colors duration-300 border-b border-gray-100"
               >
                 {link.name}
-              </a>
+              </span>
             )
           )}
 
