@@ -23,10 +23,9 @@ const HeroSection = () => {
           quality={100}
         />
       </div>
-
-      {/* Gradient Overlay (applies on all devices) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/80 to-black/60"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>
+      {/* Gradient Overlay (lighter) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-6xl mx-auto px-6 lg:px-8 py-20">
