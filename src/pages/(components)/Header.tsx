@@ -9,11 +9,13 @@ const Header = () => {
   const router = useRouter();
 
   const navLinks = [
+
     { name: "Home", path: "/" },
     { name: "Sale", path: "#sale" },
     { name: "Rent", path: "#rent" },
     { name: "Shortlet/BnB", path: "#shortlet" },
     { name: "Book & Inspection", path: "/book", isButton: true },
+
   ];
 
   return (

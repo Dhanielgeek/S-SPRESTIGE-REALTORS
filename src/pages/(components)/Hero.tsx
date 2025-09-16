@@ -1,5 +1,7 @@
 import React from "react";
+
 import heroimg from "../../../assets/TallBuilding.jpg";
+
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -29,6 +31,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
 
       {/* Hero Content */}
+
       <div className="relative z-20 max-w-6xl mx-auto px-6 lg:px-8 py-20">
         {/* Tagline */}
         <div className="inline-flex items-center px-6 py-3 bg-white/5 border border-white/20 rounded-full backdrop-blur-sm mb-8 shadow-lg">
@@ -36,6 +39,7 @@ const HeroSection = () => {
             Premium Real Estate Services
           </span>
         </div>
+
 
         {/* Main Heading */}
         <div className="mb-8">
@@ -55,6 +59,7 @@ const HeroSection = () => {
           Providing excellent service in locating your ideal property
         </p>
 
+
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
           <button className="group bg-white text-black hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:scale-105">
@@ -65,12 +70,14 @@ const HeroSection = () => {
           </button>
         </div>
 
+
         {/* ✅ Trust Badge */}
         <p className="text-sm text-gray-300 mb-16">
           Registered with the Corporate Affairs Commission (CAC), Nigeria · RC:{" "}
           <span className="font-semibold text-white">1321744</span> ·
           Incorporated in 2016
         </p>
+
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">

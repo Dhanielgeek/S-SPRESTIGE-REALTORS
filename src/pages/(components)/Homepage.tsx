@@ -5,8 +5,12 @@ import Hero from "./Hero";
 import Services from "./Services";
 import Trending from "./Trending";
 import Testimonials from "./Testimonals";
+
 import Newsletter from "./newsletter";
 import Featurelistings from "./featurelistings";
+
+
+
 
 const Homepage = () => {
   return (
