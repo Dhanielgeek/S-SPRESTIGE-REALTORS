@@ -11,7 +11,7 @@ const Header = () => {
     { name: "Sale", href: "#sale" },
     { name: "Rent", href: "#rent" },
     { name: "Shortlet/BnB", href: "#shortlet" },
-    { name: "Book Online", href: "#book", isButton: true },
+    { name: "Book & Inspection", href: "#book", isButton: true },
   ];
 
   return (

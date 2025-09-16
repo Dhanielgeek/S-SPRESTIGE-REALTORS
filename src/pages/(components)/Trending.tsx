@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import firsthouse from "../../../assets/onehouse.avif";
+import firsthouse from "../../../assets/HouseBuilding.jpg";
 
 import type { StaticImageData } from "next/image";
 

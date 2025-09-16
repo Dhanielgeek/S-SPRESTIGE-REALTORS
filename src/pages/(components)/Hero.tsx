@@ -1,6 +1,6 @@
 import React from "react";
-import heroimg from "../../../assets/herobuiliding.avif";
-import featurehouse from "../../../assets/forhero.avif";
+// import heroimg from "../../../assets/herobuiliding.avif";
+import heroimg from '../../../assets/TallBuilding.jpg'
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -49,8 +49,7 @@ const HeroSection = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-                Discover luxury properties, prime locations, and world-class
-                service. Your perfect home is just a step away.
+                Providing excellent service in locating your Ideal property .
               </p>
             </div>
 
@@ -86,7 +85,7 @@ const HeroSection = () => {
 
             <div className="w-full">
               <Image
-                src={featurehouse}
+                src={heroimg}
                 alt="Featured Property"
                 width={600}
                 height={300}
