@@ -79,7 +79,6 @@ const Trending: React.FC = () => {
             >
               <Image
                 src={property.image}
-                fill
                 priority
                 quality={100}
                 alt={property.name}
