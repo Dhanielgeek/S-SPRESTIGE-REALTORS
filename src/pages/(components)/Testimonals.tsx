@@ -57,7 +57,7 @@ const Testimonials = () => {
               {testimonials[currentIndex].text}
             </p>
             <div className="flex items-center justify-center">
-              <span className="text-orange-500 font-semibold text-lg">
+              <span className="text-black font-semibold text-lg">
                 - {testimonials[currentIndex].author}
               </span>
             </div>
@@ -68,7 +68,7 @@ const Testimonials = () => {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prevTestimonial}
-            className="group bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 rounded-full p-4 transform hover:scale-110 active:scale-95"
+            className="group bg-transparent border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 rounded-full p-4 transform hover:scale-110 active:scale-95"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-1" />
@@ -76,7 +76,7 @@ const Testimonials = () => {
 
           <button
             onClick={nextTestimonial}
-            className="group bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 rounded-full p-4 transform hover:scale-110 active:scale-95"
+            className="group bg-transparent border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 rounded-full p-4 transform hover:scale-110 active:scale-95"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
@@ -91,7 +91,7 @@ const Testimonials = () => {
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? "bg-orange-500 scale-125"
+                  ? "bg-black scale-125"
                   : "bg-gray-500 hover:bg-gray-400"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
@@ -100,8 +100,8 @@ const Testimonials = () => {
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-orange-500 rounded-full opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-orange-500 rounded-full opacity-5 animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-black rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-black rounded-full opacity-5 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-5 w-16 h-16 bg-white rounded-full opacity-5 animate-bounce delay-500"></div>
       </div>
     </div>

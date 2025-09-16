@@ -15,13 +15,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full h-[13vh] bg-white shadow-lg border-b border-gray-200 relative z-50">
+    <header className="w-full md:h-[13vh] h-[10vh] bg-white shadow-lg border-b border-gray-200 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo Section */}
           {/* Logo Section */}
           <div className="flex items-center space-x-3">
-            <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <div className="md:w-16 md:h-16 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-md">
               <Image
                 src={logo}
                 alt="Logo"
@@ -31,7 +31,7 @@ const Header = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900">
+              <span className="md:text-2xl text-lg font-bold text-gray-900">
                 S & S Prestige
               </span>
               <span className="text-sm text-gray-500 font-medium -mt-1">

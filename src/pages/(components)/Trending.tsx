@@ -44,6 +44,21 @@ const properties: Property[] = [
       "Enjoy breathtaking sunsets from this exclusive beachfront property.",
     image: firsthouse,
   },
+  {
+    id: 5,
+    name: "Cozy Bungalow",
+    location: "Ikeja, Lagos",
+    description: "A comfortable family home in a serene neighborhood.",
+    image: firsthouse,
+  },
+  {
+    id: 6,
+    name: "Luxury Villa",
+    location: "Lekki, Lagos",
+    description:
+      "A stunning 5-bedroom villa with ocean views and modern design.",
+    image: firsthouse,
+  },
 ];
 
 const Trending: React.FC = () => {
@@ -64,7 +79,6 @@ const Trending: React.FC = () => {
             >
               <Image
                 src={property.image}
-                fill
                 priority
                 quality={100}
                 alt={property.name}

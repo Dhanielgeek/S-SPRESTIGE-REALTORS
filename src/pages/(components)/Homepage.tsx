@@ -5,7 +5,9 @@ import Hero from "./Hero";
 import Services from "./Services";
 import Trending from "./Trending";
 import Testimonials from "./Testimonals";
+
 import Newsletter from "./newsletter";
+
 
 const Homepage = () => {
   return (
@@ -15,6 +17,9 @@ const Homepage = () => {
       </Head>
       <section>
         <Hero />
+      </section>
+      <section>
+        <Featurelistings />
       </section>
       <section>
         <Services />
