@@ -18,7 +18,7 @@ const HeroSection = () => {
           src={heroimg}
           alt="Hero Background"
           fill
-          className="object-cover scale-105 filter grayscale"
+          className="object-cover scale-105"
           priority
           quality={100}
         />
