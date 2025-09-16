@@ -19,21 +19,14 @@ const HeroSection = () => {
           src={heroimg}
           alt="Hero Background"
           fill
-          objectFit="cover"
+          className="object-cover"
           priority
           quality={100}
         />
       </div>
 
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 z-10"></div>
-
-      {/* Orange Accent Overlays */}
-      <div className="absolute inset-0 opacity-20 z-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-600 rounded-full blur-3xl"></div>
-      </div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50 z-10"></div>
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -41,33 +34,32 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="text-white space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center px-4 py-2 bg-orange-500/20 border border-orange-500/30 rounded-full backdrop-blur-sm">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
-                <span className="text-orange-300 text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm">
+                <span className="text-gray-200 text-sm font-medium tracking-wide">
                   Premium Real Estate Services
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 Find Your
-                <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-400">
                   Dream Home
                 </span>
                 <span className="block">Today</span>
               </h1>
 
-              <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                Discover luxury properties, prime locations, and exceptional
-                service. Your perfect home is just one click away.
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
+                Discover luxury properties, prime locations, and world-class
+                service. Your perfect home is just a step away.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+              <button className="bg-black text-white hover:bg-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg">
                 Explore Properties
               </button>
-              <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-white/30">
+              <button className="bg-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-gray-300">
                 Schedule Viewing
               </button>
             </div>
@@ -76,7 +68,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-orange-400">
+                  <div className="text-2xl md:text-3xl font-bold text-white">
                     {stat.number}
                   </div>
                   <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
@@ -86,7 +78,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content – Featured Property */}
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-white/20">
+          <div className="bg-white backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
               Featured Listing
             </h3>
@@ -98,19 +90,17 @@ const HeroSection = () => {
                 alt="Featured Property"
                 width={600}
                 height={300}
-                className="rounded-xl object-contain w-full"
+                className="rounded-xl object-cover w-full"
                 quality={100}
               />
             </div>
 
             <div className="flex justify-between items-center mt-4">
-              <span className="text-xl font-semibold text-orange-600">
-                ₦150M
-              </span>
+              <span className="text-xl font-semibold text-gray-900">₦150M</span>
               <span className="text-gray-500">5 Beds • 4 Baths</span>
             </div>
 
-            <button className="w-full mt-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 px-6 rounded-lg font-semibold transition hover:from-orange-600 hover:to-orange-700">
+            <button className="w-full mt-6 bg-black text-white py-3 px-6 rounded-lg font-semibold transition hover:bg-gray-900">
               View Details
             </button>
           </div>

@@ -2,6 +2,9 @@ import React from "react";
 import Homelayouts from "../layouts/Homelayout";
 import Head from "next/head";
 import Hero from "./Hero";
+import Services from "./Services";
+import Trending from "./Trending";
+import Testimonials from "./Testimonals";
 
 const Homepage = () => {
   return (
@@ -11,6 +14,15 @@ const Homepage = () => {
       </Head>
       <section>
         <Hero />
+      </section>
+      <section>
+        <Services />
+      </section>
+      <section>
+        <Trending />
+      </section>
+      <section>
+        <Testimonials />
       </section>
     </Homelayouts>
   );
