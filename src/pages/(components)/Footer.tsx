@@ -131,9 +131,18 @@ const Footer: React.FC = () => {
             <span className="hover:text-black transition-colors cursor-pointer">
               <FaTwitter />
             </span>
-            <span className="hover:text-black transition-colors cursor-pointer">
+            <span
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/sandsprestige?igsh=Yzd1dnBsaXE2bXB6&utm_source=qr",
+                  "_blank"
+                )
+              }
+              className="hover:text-black transition-colors cursor-pointer"
+            >
               <FaInstagram />
             </span>
+
             <span className="hover:text-black transition-colors cursor-pointer">
               <FaLinkedin />
             </span>
