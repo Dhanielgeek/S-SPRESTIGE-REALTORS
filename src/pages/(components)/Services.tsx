@@ -18,53 +18,8 @@ const ServicesSection: React.FC = () => {
   const services: Service[] = [
     {
       id: 1,
-      title: "Property Sales",
-      subtitle: "Exquisite Property Deals",
-      description:
-        "From identifying lucrative opportunities to navigating global markets, we provide expert guidance tailored to your unique needs. Wherever your property aspirations may take you, we are here to guide you.",
-      image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80",
-      features: [
-        "Market Analysis",
-        "Property Valuation",
-        "Negotiation Support",
-        "Legal Assistance",
-      ],
-    },
-    {
-      id: 2,
-      title: "Digital Solutions",
-      subtitle: "Tech Brilliance",
-      description:
-        "Leveraging cutting-edge technology to streamline your property journey. Our digital platforms provide seamless experiences from search to purchase, making real estate transactions effortless.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80",
-      features: [
-        "Virtual Tours",
-        "AI-Powered Search",
-        "Digital Documentation",
-        "Online Consultations",
-      ],
-    },
-    {
-      id: 3,
-      title: "Investment Advisory",
-      subtitle: "Strategic Investment",
-      description:
-        "Expert investment strategies tailored to maximize your returns. We analyze market trends, identify growth opportunities, and provide comprehensive investment portfolios for sustainable wealth building.",
-      image:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80",
-      features: [
-        "Portfolio Management",
-        "Risk Assessment",
-        "Market Research",
-        "ROI Optimization",
-      ],
-    },
-    {
-      id: 4,
-      title: "Property Management",
-      subtitle: "Full-Service Management",
+      title: "Full-Service Management",
+      subtitle: " Property Management",
       description:
         "Comprehensive property management services ensuring your investments are well-maintained and profitable. From tenant screening to maintenance coordination, we handle every detail.",
       image:
@@ -77,9 +32,9 @@ const ServicesSection: React.FC = () => {
       ],
     },
     {
-      id: 5,
-      title: "Asset Valuation",
-      subtitle: "True Market Value",
+      id: 2,
+      title: " Full-Service Management",
+      subtitle: "Asset Valuation",
       description:
         "We provide accurate and reliable valuations to help you understand the true worth of your assets. Our team ensures compliance with industry standards and offers insights to support your decision-making.",
       image:
@@ -92,9 +47,9 @@ const ServicesSection: React.FC = () => {
       ],
     },
     {
-      id: 6,
-      title: "Asset Management",
-      subtitle: "Maximizing Value",
+      id: 3,
+      title: "Asset Management Maximizing Value",
+      subtitle: "Asset Management",
       description:
         "Our asset management service helps you optimize your property portfolio for long-term profitability. We focus on risk mitigation, growth strategies, and sustainable wealth creation.",
       image:
@@ -107,9 +62,9 @@ const ServicesSection: React.FC = () => {
       ],
     },
     {
-      id: 7,
-      title: "Facility Management",
-      subtitle: "Seamless Operations",
+      id: 4,
+      title: "Seamless Operations",
+      subtitle: " Facility Management",
       description:
         "Ensuring your properties run smoothly with top-notch facility management services. From daily operations to long-term maintenance, we guarantee efficiency and value preservation.",
       image:
