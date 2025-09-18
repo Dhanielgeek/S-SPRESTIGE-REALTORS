@@ -16,16 +16,6 @@ const Header = () => {
   const [isPropertyDropdownOpen, setIsPropertyDropdownOpen] = useState(false);
   const router = useRouter();
 
-<<<<<<< HEAD
-  const navLinks = [
-
-    { name: "Home", path: "/" },
-    { name: "Sale", path: "#sale" },
-    { name: "Rent", path: "#rent" },
-    { name: "Shortlet/BnB", path: "#shortlet" },
-    { name: "Book & Inspection", path: "/book", isButton: true },
-
-=======
   const navLinks: {
     name: string;
     path?: string;
@@ -47,7 +37,6 @@ const Header = () => {
     { name: "Facility Management", path: "/facility-management" },
     { name: "Asset Valuation", path: "/asset-valuation" },
     { name: "Book Inspection", path: "/book", isButton: true },
->>>>>>> 2208470 (made changes on the landing again...)
   ];
 
   return (
